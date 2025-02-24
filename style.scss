@@ -5,4 +5,9 @@ $heading-colour: red;
 body{
     background-color: $secondary-colour;
     color: $primary-colour;
+    
+}
+
+h1{
+    color: $heading-colour;
 }
