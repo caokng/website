@@ -1,7 +1,7 @@
 $primary-colour: #00f;
 $secondary-colour: #ddd;
 $heading-colour: red;
-$p-colour:rgb(218, 38, 68)
+$p-colour:rgb(218, 38, 68);
 
 body{
     background-color: $secondary-colour;
@@ -14,5 +14,53 @@ h1{
 }
 
 p{
-color: $p-colour
+color: $p-colour;
+}
+
+@mixin border-radius($color: rgb(73, 88, 224), $width: 2px) {
+   border: $width solid $color;
+    background-color: rgb(247, 242, 184);
+  }
+  
+  .button {
+    @include border-radius (red, 10px)
+   
+    
+  }
+  
+  .card {
+    @include border-radius;
+    
+  }
+
+  // Mixin with conditional logic
+@mixin border-check($radius, $rounded: true) {
+    @if $rounded {
+      border-radius: $radius;
+    } @else {
+      border-radius: 0;
+    }
+  }
+  
+  // Using the mixin with conditions
+  .rounded-card {
+    @include border-check(10px); // Applies border-radius
+  }
+  
+  .square-card {
+    @include border-check(0px, false); // No border-radius
+  }
+
+
+
+
+
+
+  @mixin headings($size:10px , $line-height:10%) {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #00f;
+    font-weight: bold;
+    font-size: $size;
+    line-height: $line-height;
+   
 }

@@ -5,4 +5,26 @@ body {
 
 h1 {
   color: red;
+}
+
+p {
+  color: rgb(218, 38, 68);
+}
+
+.button {
+  border: 10px solid red;
+  background-color: rgb(247, 242, 184);
+}
+
+.card {
+  border: 2px solid rgb(73, 88, 224);
+  background-color: rgb(247, 242, 184);
+}
+
+.rounded-card {
+  border-radius: 10px;
+}
+
+.square-card {
+  border-radius: 0;
 }/*# sourceMappingURL=style.css.map */
